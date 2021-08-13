@@ -10,4 +10,5 @@ public class ActionMessages {
     public static final String CALCULATING_SPHERE_SEGMENT_HEIGHT_MESSAGE = "Calculating sphere segment height";
     public static final String CALCULATING_SPHERE_SEGMENT_VOLUME_MESSAGE = "Calculating sphere segment volume";
     public static final String CALCULATING_SPHERE_SEGMENT_RATIO_MESSAGE = "Calculating ratio between sphere segment volume and sphere volume remainder";
+    public static final String CHECKING_IS_SPHERE_TOUCHING_FLAT = "Checking is sphere touching flat";
 }

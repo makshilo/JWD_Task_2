@@ -21,7 +21,7 @@ public class SphereReaderImpl implements SphereReader {
     public List<Sphere> readFile(File file) throws IOException
     {
         List<Sphere> sphereObjects = new ArrayList<>();
-
+        LOG.trace("Reading file");
         try (FileReader fileReader = new FileReader(file))
         {
             Scanner scanner = new Scanner(fileReader);

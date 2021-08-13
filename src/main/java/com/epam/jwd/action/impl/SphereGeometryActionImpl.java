@@ -40,6 +40,7 @@ public class SphereGeometryActionImpl implements SphereGeometryAction {
     @Override
     public boolean isSphereTouchingFlat(Sphere sphere, Point3D point)
     {
+        LOG.trace(ActionMessages.CHECKING_IS_SPHERE_TOUCHING_FLAT);
         return Math.abs(point.getX() - sphere.getSphereCenterPoint().getX()) >= sphere.getSphereRadius()
                 || Math.abs(point.getY() - sphere.getSphereCenterPoint().getY()) >= sphere.getSphereRadius()
                 || Math.abs(point.getZ() - sphere.getSphereCenterPoint().getZ()) >= sphere.getSphereRadius();
