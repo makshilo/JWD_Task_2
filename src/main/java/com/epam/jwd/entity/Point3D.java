@@ -5,14 +5,10 @@ import org.apache.logging.log4j.Logger;
 
 public class Point3D
 {
-    public static final Logger LOG = LogManager.getLogger(Point3D.class);
-    public static final String CREATING_POINT_MESSAGE = "Creating point3DEntity";
-
     private final double x,y,z;
 
     public Point3D()
     {
-        LOG.trace(CREATING_POINT_MESSAGE);
         x = 0.0;
         y = 0.0;
         z = 0.0;
@@ -20,7 +16,6 @@ public class Point3D
 
     public Point3D(double initialX, double initialY, double initialZ)
     {
-        LOG.trace(CREATING_POINT_MESSAGE);
         x = initialX;
         y = initialY;
         z = initialZ;

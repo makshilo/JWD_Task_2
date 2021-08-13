@@ -6,28 +6,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Sphere {
-    public static final Logger LOG = LogManager.getLogger(Sphere.class);
-    public static final String CREATING_SPHERE_ENTITY_MESSAGE = "Creating SphereEntity";
-
     private final Point3D sphereCenterPoint;
     private final double sphereRadius;
 
     public Sphere()
     {
-        LOG.trace(CREATING_SPHERE_ENTITY_MESSAGE);
         sphereCenterPoint = new Point3D();
         sphereRadius = 0.0;
     }
 
     public Sphere(Point3D initialSphereCenterPoint, double initialSphereRadius)
     {
-        LOG.trace(CREATING_SPHERE_ENTITY_MESSAGE);
         sphereCenterPoint = initialSphereCenterPoint;
         sphereRadius = initialSphereRadius;
     }
 
     public Sphere(String context) throws IncorrectInputException {
-        LOG.trace(CREATING_SPHERE_ENTITY_MESSAGE);
         SphereInputValidator validator = new SphereInputValidator();
         if (validator.checkInput(context))
         {
