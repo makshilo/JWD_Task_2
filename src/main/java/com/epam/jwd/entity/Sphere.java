@@ -1,5 +1,7 @@
 package com.epam.jwd.entity;
 
+import com.epam.jwd.action.SphereGeometryAction;
+import com.epam.jwd.action.impl.SphereGeometryActionImpl;
 import com.epam.jwd.exception.IncorrectInputException;
 import com.epam.jwd.registrar.SphereObservable;
 import com.epam.jwd.registrar.SphereObserver;
@@ -8,7 +10,7 @@ import com.epam.jwd.validator.SphereInputValidator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Sphere implements SphereObservable {
+public class Sphere implements SphereObservable, Comparable<Sphere> {
     private Point3D sphereCenterPoint;
     private double sphereRadius;
 
@@ -104,6 +106,12 @@ public class Sphere implements SphereObservable {
     public void setSphereRadius(double sphereRadius) {
         this.sphereRadius = sphereRadius;
         notifyObservers();
+    }
+
+    @Override
+    public int compareTo(Sphere comparable) {
+        SphereGeometryAction action = new SphereGeometryActionImpl();
+        return (int) (action.calculateSphereVolume(this) - action.calculateSphereVolume(comparable));
     }
 
     public Point3D getSphereCenterPoint() {
