@@ -1,11 +1,8 @@
 package com.epam.jwd.entity;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 public class Point3D
 {
-    private final double x,y,z;
+    private double x,y,z;
 
     public Point3D()
     {
@@ -72,4 +69,15 @@ public class Point3D
         return z;
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
 }
